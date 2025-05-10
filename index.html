@@ -3,44 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tienda de Donas</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Mini Donas Delicias</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Donas Deliciosas</h1>
+  <nav class="navbar">
+    <div class="logo">Mini Donas</div>
+    <button class="btn" id="linktree-btn">Síguenos</button>
+  </nav>
+
+  <header class="hero">
+    <h1>¡Bienvenidos a Mini Donas!</h1>
+    <p>Los bocados más dulces y divertidos.</p>
   </header>
 
-  <section id="gallery">
-    <h2>Nuestras Donas</h2>
-    <div class="gallery-container">
-      <!-- gallery.js insertará aquí las imágenes -->
-    </div>
-  </section>
+  <main>
+    <section id="gallery" class="section">
+      <h2>Nuestras Donas Destacadas</h2>
+      <div class="gallery-container">
+        <!-- gallery.js insertará aquí las cards -->
+      </div>
+    </section>
 
-  <section id="menu">
-    <h2>Menú de Donas</h2>
-    <table id="donut-table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Descripción</th>
-          <th>Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- table.js insertará aquí las filas -->
-      </tbody>
-    </table>
-  </section>
+    <section id="menu" class="section">
+      <h2>Menú y Precios</h2>
+      <table id="donut-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- table.js insertará aquí las filas -->
+        </tbody>
+      </table>
+    </section>
+  </main>
 
   <footer>
-    <button id="linktree-btn">Síguenos</button>
+    <p>&copy; 2025 Mini Donas Delicias</p>
   </footer>
 
-  <!-- Archivos JS por separado -->
-  <script src="gallery.js"></script>
-  <script src="table.js"></script>
-  <script src="linktree.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/linktree.js"></script>
 </body>
 </html>
