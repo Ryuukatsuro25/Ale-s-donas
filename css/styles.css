@@ -150,6 +150,17 @@ tbody tr:nth-child(even) {
   background: #fafafa;
 }
 
+.contact-info {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
