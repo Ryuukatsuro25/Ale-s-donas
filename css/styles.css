@@ -1,169 +1,48 @@
+/* Variables y reset */
 :root {
-  --primary-pink:     #F48FB1;
-  --secondary-teal:   #80DEEA;
-  --accent-yellow:    #FFD54F;
-  --light-pink:       #FCE4EC;
-  --dark-brown:       #4E342E;
-
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body:    'Open Sans', sans-serif;
-
-  --transition: 0.3s ease;
-  --gap: 1rem;
+  --primary: #FF6FA3;
+  --secondary: #80E9DE;
+  --accent: #FFD54F;
+  --bg: #FCE4EC;
+  --text: #4E342E;
+  --dark-bg: #2C2C2C;
+  --dark-text: #E0E0E0;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--light-pink);
-  color: var(--dark-brown);
-  line-height: 1.5;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--primary-pink);
-  padding: 1rem 2rem;
-}
-
-.navbar .logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: white;
-}
-
-.btn {
-  background: var(--secondary-teal);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-family: var(--font-heading);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background var(--transition);
-}
-
-.btn:hover {
-  background: var(--accent-yellow);
-}
-
-.hero {
-  text-align: center;
-  background: var(--secondary-teal);
-  color: var(--dark-brown);
-  padding: 3rem 1rem;
-}
-
-.hero h1 {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-main .section {
-  padding: 2rem 1rem;
-}
-
-.section h2 {
-  font-family: var(--font-heading);
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--primary-pink);
-}
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: var(--gap);
-  padding: 0 1rem;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-.card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 0.75rem;
-  text-align: center;
-}
-
-.card-body h3 {
-  font-family: var(--font-heading);
-  margin-bottom: 0.25rem;
-  font-size: 1.1rem;
-  color: var(--primary-pink);
-}
-
-.card-body .price {
-  font-weight: bold;
-  color: var(--secondary-teal);
-}
-
-table {
-  width: 90%;
-  max-width: 700px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-th, td {
-  padding: 0.75rem 1rem;
-  text-align: center;
-}
-
-th {
-  background: var(--accent-yellow);
-  font-family: var(--font-heading);
-}
-
-tbody tr:nth-child(even) {
-  background: #fafafa;
-}
-
-.contact-info {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.contact-info p {
-  margin: 0.5rem 0;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--primary-pink);
-  color: white;
-}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Open Sans', sans-serif; background: var(--bg); color: var(--text); line-height:1.6; }
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:var(--primary); color:white; }
+.logo { font-family:'Montserrat', sans-serif; font-size:1.5rem; }
+.nav-actions button { margin-left:1rem; }
+.btn { background:var(--secondary); border:none; padding:.5rem 1rem; border-radius:5px; cursor:pointer; transition:.3s; color:white; font-family:'Montserrat'; }
+.btn:hover { background:var(--accent); }
+#dark-mode-toggle { background:none; font-size:1.2rem; }
+.hero { text-align:center; padding:3rem 1rem; background:var(--secondary); color:var(--text); }
+.hero .promo-banner { margin-top:1rem; background:var(--accent); padding:.5rem 1rem; display:inline-block; border-radius:5px; }
+.section { padding:2rem 1rem; }
+.section h2 { text-align:center; margin-bottom:1rem; color:var(--primary); font-family:'Montserrat'; }
+.gallery-container { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:1rem; }
+.card { background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:.3s; }
+.card img { width:100%; height:140px; object-fit:cover; }
+.card-body { padding:.75rem; text-align:center; }
+.card-body h3 { margin-bottom:.5rem; color:var(--primary); }
+.card-body .price { font-weight:bold; color:var(--secondary); }
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.15); }
+table { width:90%; max-width:700px; margin:0 auto; border-collapse:collapse; background:white; border-radius:8px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+th, td { padding:1rem; text-align:center; }
+th { background:var(--accent); }
+tbody tr:nth-child(even) { background:#fafafa; }
+#cookie-banner { position:fixed; bottom:0; width:100%; background:var(--accent); padding:1rem; text-align:center; }
+#cookie-banner button { margin-left:1rem; padding:.5rem 1rem; }
+nav a, .read-more { color:var(--primary); text-decoration:none; }
+#cart-modal { display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; padding:2rem; box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:8px; }
+#cart-items { list-style:none; margin:1rem 0; max-height:200px; overflow:auto; }
+footer { text-align:center; padding:1rem; background:var(--primary); color:white; }
+iframe { width:100%; height:300px; border:0; border-radius:8px; }
+form { max-width:500px; margin:0 auto; display:grid; gap:1rem; }
+input, textarea { width:100%; padding:.5rem; border:1px solid #ccc; border-radius:4px; }
+#cart-count { background:red; border-radius:50%; padding:0 6px; margin-left:4px; }
+.dark-mode { background:var(--dark-bg); color:var(--dark-text); }
+.dark-mode .navbar { background:var(--dark-bg); }
+.dark-mode .hero { background:var(--dark-bg); color:var(--dark-text); }
+.dark-mode .section h2 { color:var(--secondary); }
+.dark-mode table, .dark-mode .card { background:#3a3a3a; }

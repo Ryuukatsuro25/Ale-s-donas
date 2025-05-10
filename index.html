@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Donas Delicias</title>
+  <meta name="description" content="Mini Donas Delicias - Las mejores donas artesanales.">
+  <meta property="og:title" content="Mini Donas Delicias">
+  <meta property="og:description" content="Mini Donas Delicias - Las mejores donas artesanales.">
+  <meta property="og:image" content="images/donut1.jpg">
+  <meta property="og:url" content="https://tusitio.com">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mini Donas Delicias",
+    "image": "https://tusitio.com/images/donut1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrera 123 #45-67",
+      "addressLocality": "Ciudad",
+      "addressCountry": "Colombia"
+    },
+    "telephone": "+57 300 123 4567",
+    "email": "contacto@minidonas.com",
+    "url": "https://tusitio.com"
+  }
+  </script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <!-- CSS separado -->
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Lightbox2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div id="cookie-banner" role="dialog" aria-live="polite">
+    <p>Usamos cookies para mejorar tu experiencia. <button id="accept-cookies">Aceptar</button></p>
+  </div>
   <nav class="navbar">
     <div class="logo">Mini Donas</div>
-    <button class="btn" id="linktree-btn">Síguenos</button>
+    <div class="nav-actions">
+      <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌓</button>
+      <button class="btn" id="linktree-btn">Síguenos</button>
+      <button class="btn" id="cart-btn" aria-label="Ver carrito">🛒<span id="cart-count">0</span></button>
+    </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero" data-aos="fade-down">
     <h1>¡Bienvenidos a Mini Donas!</h1>
     <p>Los bocados más dulces y divertidos.</p>
+    <div class="promo-banner" data-aos="zoom-in">¡Oferta: 20% de descuento en donas especiales!</div>
   </header>
 
   <main>
@@ -30,7 +64,7 @@
 
     <section id="menu" class="section">
       <h2>Menú y Precios</h2>
-      <table id="donut-table">
+      <table id="donut-table" aria-label="Tabla de precios">
         <thead>
           <tr>
             <th>Categoría</th>
@@ -38,29 +72,76 @@
             <th>Precio</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- table.js insertará aquí las filas -->
-        </tbody>
+        <tbody></tbody>
       </table>
     </section>
 
-    <section id="contact" class="section">
+    <section id="testimonials" class="section" data-aos="fade-up">
+      <h2>Testimonios</h2>
+      <blockquote>"¡Las mejores donas que he probado!" - Ana</blockquote>
+      <blockquote>"Recomendadas 100%." - Carlos</blockquote>
+    </section>
+
+    <section id="blog" class="section" data-aos="fade-right">
+      <h2>Blog y Recetas</h2>
+      <article>
+        <h3>Receta de Glaseado de Chocolate</h3>
+        <p>Aprende a preparar un delicioso glaseado...</p>
+        <a href="#" class="read-more">Leer más</a>
+      </article>
+      <article>
+        <h3>Historia de Nuestras Donas</h3>
+        <p>Descubre cómo nació nuestra pasión...</p>
+        <a href="#" class="read-more">Leer más</a>
+      </article>
+    </section>
+
+    <section id="subscribe" class="section" data-aos="fade-left">
+      <h2>Suscríbete a nuestro Newsletter</h2>
+      <form action="https://formspree.io/f/xyz" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </section>
+
+    <section id="contact" class="section" data-aos="fade-up">
       <h2>Contacto</h2>
-      <div class="contact-info">
-        <p><strong>Dirección:</strong> Carrera 123 #45-67, Ciudad</p>
-        <p><strong>Teléfono:</strong> +57 300 123 4567</p>
-        <p><strong>Email:</strong> contacto@minidonas.com</p>
-        <p><strong>Instagram:</strong> @minidonas</p>
+      <form id="contact-form" action="https://formspree.io/f/abc" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email-contact">Email:</label>
+        <input type="email" id="email-contact" name="_replyto" required>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." loading="lazy" aria-label="Mapa"></iframe>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mini Donas Delicias</p>
+    <p>&copy; 2025 Mini Donas Delicias | <a href="privacy.html">Política de Privacidad</a></p>
   </footer>
 
+  <!-- Cart Modal -->
+  <div id="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <h2 id="cart-title">Tu Carrito</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total">$0</span></p>
+    <button id="checkout-btn">Checkout</button>
+    <button id="close-cart">Cerrar</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/table.js"></script>
-  <script src="js/linktree.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
